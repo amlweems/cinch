@@ -35,7 +35,7 @@ module Cinch
 
       text.split(/\r\n|\r|\n/).each do |line|
         maxlength = 510 - (":" + " #{command} " + " :").size
-        maxlength = maxlength - @bot.mask.to_s.length - @name.to_s.length
+        maxlength = maxlength - @name.to_s.length
         maxlength_without_end = maxlength - split_end.bytesize
 
         if line.bytesize > maxlength
